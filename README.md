@@ -39,7 +39,7 @@ Simple. Fast. Life-saving.
 
 ## 🌐 Try It Now
 
-**[👉 Launch PharmaGuard](https://pharmaguard.onrender.com)**
+**[👉 Launch PharmaGuard](https://pharmaai-a61p.onrender.com/)**
 
 No signup. No credit card. Just upload and know.
 
@@ -47,7 +47,7 @@ No signup. No credit card. Just upload and know.
 
 ## 🎥 See It In Action
 
-**[Watch the 2-minute demo →](https://linkedin.com/YOUR_VIDEO_LINK)**
+**[Watch the 2-minute demo →](https://drive.google.com/drive/folders/1TOGzCKPRR-EQTYQkWmTQUKRcwUT8OBer)**
 
 ---
 
@@ -83,20 +83,18 @@ After analysis, PharmaGuard gives you:
 ## Real Output Example
 
 ```
-Patient: PATIENT_1234
-Drug: CODEINE
-Risk: ❌ TOXIC — CONTRAINDICATED
-
-Gene: CYP2D6  |  Phenotype: Poor Metabolizer
-Mutation: rs3892097 (*4/*4 diplotype)
-
-⚠️  Do NOT give this patient codeine.
-✅  Safe alternatives: Morphine, Oxycodone
-
-Explanation: This patient's CYP2D6 gene is non-functional.
-Codeine cannot be metabolized normally — it will convert to
-dangerously high morphine levels. CPIC Level A recommendation:
-AVOID. This is not a preference. This is a life-or-death call.
+P{ "patient_id": "PATIENT_XXX", 
+"drug": "DRUG_NAME", 
+"timestamp": "ISO8601_timestamp", 
+"risk_assessment": { "risk_label": "Safe|Adjust Dosage|Toxic|...", 
+"confidence_score": 0.0, "severity": "none|low|moderate|high|critical" }, 
+"pharmacogenomic_profile": { "primary_gene": "GENE_SYMBOL", 
+"diplotype": "*X/*Y", "phenotype": "PM|IM|NM|RM|URM|Unknown", 
+"detected_variants": [ { "rsid": "rsXXXX", ... } ] }, 
+"clinical_recommendation": { ... }, 
+"llm_generated_explanation": { "summary": "...", ... }, 
+"quality_metrics": { "vcf_parsing_success": true, ... } 
+}
 ```
 
 ---
@@ -144,18 +142,19 @@ We included 3 sample patient files so you can see PharmaGuard in action immediat
 |------|-----|
 | Frontend | Vanilla HTML/CSS/JS — no bloat, just fast |
 | Backend | Node.js + Express |
-| AI Engine | Google Gemini 2.0 Flash |
+| AI Engine | LLM |
 | Standards | CPIC Guidelines (the gold standard in pharmacogenomics) |
 | Hosting | Render.com — free, fast, reliable |
 
 ---
 
-## 👥 Team
+## 👥CoderX Team
 
 Built with love, urgency, and a lot of late nights at **RIFT 2026 Hackathon — HealthTech Track**.
 
-- **[Your Name]** — [Role]
-- **[Team Member]** — [Role]
+- **[Ankur Ojha]** — [Leader]
+- **[Vedant Mahore]** 
+- **[Harshal Vidhate]** 
 
 ---
 
